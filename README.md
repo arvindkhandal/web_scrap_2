@@ -19,7 +19,27 @@ This project provides a web scraping API to extract data from Y Combinator's pub
 ## API Endpoint
 
 EC2: Endpoint
-http://13.201.48.181:3000/y_combinator/scrape
+http://13.233.127.246:3000/y_combinator/scrape
+
+##culr got get company data
+
+curl --location --request GET 'http://13.233.127.246:3000/y_combinator/scrape' \
+--header 'Content-Type: application/json' \
+--data '{
+"n": 120,
+"filters": {
+"batch": "W21",
+"industry": "Healthcare",
+"region": "United States of America",
+
+"is_hiring": true,
+"nonprofit": false,
+"black_founded": false,
+"hispanic_latino_founded": false,
+"women_founded": true
+
+}
+}'
 
 ### `/y_combinator/scrape`
 
